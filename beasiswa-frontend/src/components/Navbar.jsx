@@ -53,7 +53,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
                          hover:scale-110 active:scale-95"
               title={isDark ? 'Light Mode' : 'Dark Mode'}
             >
-              {isDark ? '☀️' : '🌙'}
+              {isDark ? '🌙' : '☀️'}
             </button>
           </div>
         </div>
