@@ -22,10 +22,15 @@ class BeasiswaFuzzyEngine:
         self.ipk['sedang'] = fuzz.trimf(self.ipk.universe, [2.5, 3.0, 3.5])
         self.ipk['tinggi'] = fuzz.trimf(self.ipk.universe, [3.25, 4.0, 4.0])
 
-        # Penghasilan Ortu (dalam Juta Rupiah)
-        self.penghasilan['rendah'] = fuzz.trimf(self.penghasilan.universe, [0, 0, 3.5])
-        self.penghasilan['sedang'] = fuzz.trimf(self.penghasilan.universe, [2.5, 5.0, 7.5])
-        self.penghasilan['tinggi'] = fuzz.trimf(self.penghasilan.universe, [6.0, 15.0, 15.0])
+       
+     # Sesuaikan range dalam Rupiah
+
+        self.penghasilan = ctrl.Antecedent(np.arange(0, 10_000_001, 100_000), 'penghasilan')
+        
+        self.penghasilan['sangat_rendah'] = fuzz.trimf(self.penghasilan.universe, [0, 0, 2_000_000])
+        self.penghasilan['rendah'] = fuzz.trimf(self.penghasilan.universe, [1_000_000, 2_500_000, 4_000_000])
+        self.penghasilan['sedang'] = fuzz.trimf(self.penghasilan.universe, [3_000_000, 5_000_000, 7_000_000])
+        self.penghasilan['tinggi'] = fuzz.trimf(self.penghasilan.universe, [6_000_000, 10_000_000, 10_000_000])
 
         # Skor Kelayakan (0 - 100%)
         self.kelayakan['rendah'] = fuzz.trimf(self.kelayakan.universe, [0, 0, 50])

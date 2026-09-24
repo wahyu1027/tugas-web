@@ -62,8 +62,8 @@ export default function TabelRiwayat({ data, loading }) {
                   <td className="px-6 py-4 text-sm text-gray-600">
                     {item.ipk}
                   </td>
-                  <td className="px-6 py-4 text-sm text-gray-600">
-                    Rp {item.penghasilan_ortu} Jt
+                 <td className="px-6 py-4 text-sm text-gray-600 dark:text-slate-400">
+                    Rp {parseInt(item.penghasilan_ortu).toLocaleString('id-ID')}
                   </td>
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-2">

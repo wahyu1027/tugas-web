@@ -11,15 +11,15 @@ export default function FormPengajuan({ onSubmit, loading }) {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit({
-      mahasiswa_id: form.mahasiswa_id.trim(),
-      ipk: parseFloat(form.ipk),
-      penghasilan_ortu: parseFloat(form.penghasilan_ortu),
-    });
-    setForm({ mahasiswa_id: '', ipk: '', penghasilan_ortu: '' });
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
+  onSubmit({
+    mahasiswa_id: form.mahasiswa_id.trim(),
+    ipk: parseFloat(form.ipk),
+    penghasilan_ortu: parseInt(form.penghasilan_ortu), // ← integer Rupiah
+  });
+  setForm({ mahasiswa_id: '', ipk: '', penghasilan_ortu: '' });
+};
 
   return (
     <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden transition-colors duration-300">
@@ -81,7 +81,7 @@ export default function FormPengajuan({ onSubmit, loading }) {
             min="0"
             value={form.penghasilan_ortu}
             onChange={handleChange}
-            placeholder="2.5"
+            placeholder="2000000"
             required
             className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 
              bg-white dark:bg-slate-700 text-gray-800 dark:text-white
@@ -111,7 +111,7 @@ export default function FormPengajuan({ onSubmit, loading }) {
               Memproses...
             </>
           ) : (
-            <>🚀 Proses AI</>
+            <> Proses AI</>
           )}
         </button>
       </form>
