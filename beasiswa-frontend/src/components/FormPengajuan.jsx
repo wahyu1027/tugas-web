@@ -62,9 +62,10 @@ export default function FormPengajuan({ onSubmit, loading }) {
             onChange={handleChange}
             placeholder="3.50"
             required
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg 
-                       focus:outline-none focus:ring-2 focus:ring-indigo-500 
-                       focus:border-transparent transition"
+            className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 
+             bg-white dark:bg-slate-700 text-gray-800 dark:text-white
+             rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 
+             focus:border-transparent transition placeholder-gray-400 dark:placeholder-slate-500" //i
           />
         </div>
 
@@ -82,9 +83,10 @@ export default function FormPengajuan({ onSubmit, loading }) {
             onChange={handleChange}
             placeholder="2.5"
             required
-            className="w-full px-4 py-2.5 border border-gray-300 rounded-lg 
-                       focus:outline-none focus:ring-2 focus:ring-indigo-500 
-                       focus:border-transparent transition"
+            className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 
+             bg-white dark:bg-slate-700 text-gray-800 dark:text-white
+             rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 
+             focus:border-transparent transition placeholder-gray-400 dark:placeholder-slate-500" //i
           />
         </div>
 
