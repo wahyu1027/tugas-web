@@ -1,6 +1,3 @@
-# ============================================
-# 🔐 ENVIRONMENT & SECRETS — JANGAN PERNAH PUSH
-# ============================================
 .env
 .env.*
 .env.local
@@ -25,9 +22,9 @@ service-account.json
 .azure/
 
 
-# ============================================
-# 🐍 PYTHON — Backend
-# ============================================
+
+# PYTHON — Backend
+
 __pycache__/
 *.py[cod]
 *$py.class
@@ -86,9 +83,7 @@ profile_default/
 ipython_config.py
 
 
-# ============================================
-# 📦 NODE / NPM — Frontend
-# ============================================
+
 node_modules/
 node_modules
 /.pnp
@@ -124,9 +119,7 @@ out/
 .tmp/
 
 
-# ============================================
-# 🗄️ DATABASE — File & Data Pribadi
-# ============================================
+
 *.db
 *.db-shm
 *.db-wal
@@ -143,9 +136,7 @@ backup.sql
 *.accdb
 
 
-# ============================================
-# 📊 DATA & DATASET
-# ============================================
+
 data/
 datasets/
 dataset/
@@ -167,15 +158,13 @@ dataset/
 *.tflite
 *.model
 
-# Kecualikan file contoh
+
 !sample.csv
 !example.xlsx
 !data/.gitkeep
 
 
-# ============================================
-# 📸 UPLOAD & MEDIA
-# ============================================
+
 uploads/
 upload/
 media/
@@ -188,9 +177,7 @@ logs/
 *.pid.lock
 
 
-# ============================================
-# 🎨 IDE & EDITOR
-# ============================================
+
 .vscode/
 !.vscode/extensions.json
 !.vscode/settings.json.example
@@ -209,9 +196,7 @@ logs/
 .history/
 
 
-# ============================================
-# 🖥️ OPERATING SYSTEM
-# ============================================
+
 # macOS
 .DS_Store
 .DS_Store?
@@ -239,9 +224,7 @@ $RECYCLE.BIN/
 .nfs*
 
 
-# ============================================
-# 📝 TEMPORARY & MISC
-# ============================================
+
 *.bak
 *.backup
 *.old
@@ -262,9 +245,7 @@ tmp/
 *.tar.gz
 
 
-# ============================================
-# 🚀 DEPLOYMENT & CLOUD
-# ============================================
+
 .vercel/
 .netlify/
 .heroku/
@@ -276,9 +257,7 @@ tmp/
 .terraform.lock.hcl
 
 
-# ============================================
-# ✅ YANG DIKECUALIKAN (TETAP DI-PUSH)
-# ============================================
+
 !README.md
 !LICENSE
 !requirements.txt
@@ -294,8 +273,3 @@ tmp/
 !screenshots/
 
 
-# ============================================
-# 📂 FOLDER KOSONG
-# ============================================
-# Kalau perlu folder kosong, tambahkan .gitkeep di dalamnya
-!**/.gitkeep
