@@ -34,8 +34,7 @@ git push origin feature/nama-fitur
 - [Setup Frontend](#-setup-frontend)
 - [Menjalankan Aplikasi](#-menjalankan-aplikasi)
 - [Testing](#-testing)
-- [Troubleshooting](#-troubleshooting)
-- [Kontribusi](#-kontribusi)
+
 
 ---
 
