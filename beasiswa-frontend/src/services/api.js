@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-// HAPUS URL localhost, ganti dengan jalur relatif Vercel
-const API_URL = '/api/v1'; 
+const API_URL = '/api/v1';
 
 const api = axios.create({
   baseURL: API_URL,
