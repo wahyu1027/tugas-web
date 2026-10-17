@@ -71,7 +71,7 @@
   </div>
 
   <script>
-    const API_URL = "http://127.0.0.1:8000/api/v1";
+    const API_URL = "/api/v1";
 
     document.addEventListener("DOMContentLoaded", loadRiwayat);
 
@@ -94,7 +94,7 @@
           const row = `<tr>
             <td>${item.mahasiswa_id}</td>
             <td>${item.ipk}</td>
-            <td>Rp ${item.penghasilan_ortu} Jt</td>
+            <td>Rp ${new Intl.NumberFormat("id-ID").format(item.penghasilan_ortu)}</td>
             <td>${item.skor_kelayakan}%</td>
             <td><span class="badge ${getBadgeClass(item.status)}">${item.status}</span></td>
           </tr>`;
@@ -111,7 +111,7 @@
       const payload = {
         mahasiswa_id: document.getElementById("mahasiswaId").value.trim(),
         ipk: parseFloat(document.getElementById("ipk").value),
-        penghasilan_ortu: parseFloat(document.getElementById("penghasilan").value)
+        penghasilan_ortu: parseFloat(document.getElementById("penghasilan").value) * 1_000_000
       };
 
       console.log("📤 Payload:", payload);
