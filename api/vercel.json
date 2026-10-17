@@ -1,13 +1,13 @@
 {
   "functions": {
-    "../beasiswa/main.py": {
+    "api/**/*.py": {
       "runtime": "@vercel/python"
     }
   },
   "rewrites": [
     {
-      "source": "/beasiswa/(.*)",
-      "destination": "/beasiswa/main.py/"
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
     },
     {
       "source": "/(.*)",
